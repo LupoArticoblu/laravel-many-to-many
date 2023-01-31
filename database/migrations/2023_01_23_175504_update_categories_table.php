@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::table('portfolios', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id')->nullable()->after('id');
+            $table->unsignedBigInteger('user_id')->nullable()->after('id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->cascadeOnDelete();
+
+            $table->unsignedBigInteger('category_id')->nullable()->after('user_id');
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')

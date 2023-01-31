@@ -11,8 +11,8 @@
   @if (session('message'))
     <div class="alert alert-success" role="alert">{{session('message')}}</div>
   @endif
-
-  <form action="{{route('admin.categories.store')}}" class="table w-50">
+                                                                    {{-- mancava il metodo --}}
+  <form action="{{route('admin.categories.store')}}" class="table w-50" method="POST">
     {{-- mancava --}}
     @csrf
     <div class="input-group mb-3">

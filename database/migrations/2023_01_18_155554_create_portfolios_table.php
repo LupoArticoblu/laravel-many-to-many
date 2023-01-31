@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->date('date');
             $table->string('image')->nullable();
+            $table->text('text')->nullable();
             $table->string('image_original_name')->nullable();
             $table->timestamps();
         });

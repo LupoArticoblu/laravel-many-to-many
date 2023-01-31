@@ -12,7 +12,7 @@
     <div class="alert alert-success" role="alert">{{session('message')}}</div>
   @endif
 
-  <form action="{{route('admin.tag.store')}}" class="table w-50">
+  <form action="{{route('admin.tag.store')}}" class="table w-50" method="POST">
     @csrf
     <div class="input-group mb-3">
       <input name="name" type="text" class="form-control" placeholder="Nuovo Tag" aria-label="Recipient's username" aria-describedby="button-addon2">

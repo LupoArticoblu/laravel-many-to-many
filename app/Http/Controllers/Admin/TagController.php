@@ -43,7 +43,7 @@ class TagController extends Controller
         ]);
         $slug = Str::slug($val_request['name']);
         $val_request['slug'] = $slug;
-
+        
         Tag::create($val_request);
 
         return redirect()->back()->with('message', "Tag: $request->name aggiornato");
